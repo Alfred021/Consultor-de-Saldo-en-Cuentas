@@ -1,0 +1,8 @@
+.Container {
+    border-radius: 10;
+    border-color: red;
+    border-width: 10;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
