@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.screen-dimentions {
+  width: 1024px;
+  height: 728px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
