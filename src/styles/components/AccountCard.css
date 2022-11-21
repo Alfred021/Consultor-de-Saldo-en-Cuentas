@@ -1,8 +1,12 @@
-.Container {
-    border-radius: 10;
-    border-color: red;
-    border-width: 10;
+.card-container {
+    border-radius: 10px;
+    border-width: 20px;
     display: flex;
     flex-direction: column;
-    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    background-color: greenyellow;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: white;
 }

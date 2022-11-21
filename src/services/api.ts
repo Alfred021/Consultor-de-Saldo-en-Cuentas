@@ -2,7 +2,7 @@ import Account from "../types/models/Account";
 
 export const getAccounts = async ():Promise<Account[] |null> => {
     try {
-        const accountsResponse = await fetch('https://api.npoint.io/97d89162575a9d816661').then(response => {
+        const accountsResponse = await fetch(process.env.REACT_APP_API_URL ?? '').then(response => {
             if (!response) {
                 throw new Error(response)
             }
@@ -17,7 +17,7 @@ export const getAccounts = async ():Promise<Account[] |null> => {
 
 const parseAccounts = (accounts: any[]):Account[] => {
     return accounts.map((account) => parseAccount(account)).filter((account) => {
-        if (account.n === ' ' || translateAccountType(account.tipoLetras) === '') {
+        if (account.n === ' ' || translateAccountType(account.tipoLetras) === '' || translateCurrency(account.moneda) === '') {
             return false;
         } else {
             return true;
@@ -57,3 +57,11 @@ export const translateCurrency = (type: string): string => {
             return '';
     }
 };
+
+export const formatBalances = (balance: string): string => {
+    if (balance.includes('-')) {
+        return balance.replaceAll('-', '');
+    } else {
+        return balance;
+    }
+}

@@ -45,12 +45,16 @@ const AccountsScreen = ():JSX.Element => {
     }
 
     return (
-        <div className="screen-dimentions">
+        <div>
+          <div className="titles-container">
             <h2>Consulta de Saldo</h2>
             <h1>Seleccione la cuenta a consultar</h1>
+          </div>
             <div className="accounts-container">
               {page > 1 && (
-                 <span onClick={() => previousPage()}>Anteriores</span>
+                <span className="change-page-button" onClick={() => previousPage()}>
+                  <h2>{"<< Anteriores"}</h2>
+                </span>
               )}
               {paginationAccounts?.map((account) =>(
                   <>
@@ -58,7 +62,9 @@ const AccountsScreen = ():JSX.Element => {
                   </>   
               ))}
               {accounts && pageSize * page < accounts?.length -1  && (
-                <span onClick={() => nextPage()}>Siguientes</span>
+                <span className="change-page-button" onClick={() => nextPage()}>
+                  <h2>{"Siguientes >>"}</h2>
+                </span>
               )}
             </div>
         </div>

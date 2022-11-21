@@ -7,7 +7,11 @@ import Route from './components/Route';
 
 function App() {
   return (
-      <div className='screen-dimentions'>
+      <div className='app-container'>
+        <header>
+          <div className='header'>
+          </div>
+        </header>
         <Route path='/'>
           <AccountsScreen />
         </Route>
