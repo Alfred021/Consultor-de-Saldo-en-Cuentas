@@ -2,7 +2,7 @@ import Account from "../types/models/Account";
 
 export const getAccounts = async ():Promise<Account[] |null> => {
     try {
-        const accountsResponse = await fetch('https://api.npoint.io/97d89162575a9d816661').then(response => {
+        const accountsResponse = await fetch(process.env.REACT_APP_API_URL ?? '').then(response => {
             if (!response) {
                 throw new Error(response)
             }
