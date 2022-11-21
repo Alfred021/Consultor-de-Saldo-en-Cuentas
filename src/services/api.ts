@@ -17,7 +17,7 @@ export const getAccounts = async ():Promise<Account[] |null> => {
 
 const parseAccounts = (accounts: any[]):Account[] => {
     return accounts.map((account) => parseAccount(account)).filter((account) => {
-        if (account.n === ' ' || translateAccountType(account.tipoLetras) === '') {
+        if (account.n === ' ' || translateAccountType(account.tipoLetras) === '' || translateCurrency(account.moneda) === '') {
             return false;
         } else {
             return true;
@@ -57,3 +57,11 @@ export const translateCurrency = (type: string): string => {
             return '';
     }
 };
+
+export const formatBalances = (balance: string): string => {
+    if (balance.includes('-')) {
+        return balance.replaceAll('-', '');
+    } else {
+        return balance;
+    }
+}
