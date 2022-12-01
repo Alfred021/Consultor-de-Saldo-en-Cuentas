@@ -9,7 +9,7 @@ export const getAccounts = async ():Promise<Account[] |null> => {
     } catch (error) {
         console.log(error);
         return null;
-    };
+    }
 }
 
 const parseAccounts = (accounts: any[]):Account[] => {

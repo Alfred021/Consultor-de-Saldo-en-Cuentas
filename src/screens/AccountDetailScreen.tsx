@@ -1,4 +1,3 @@
-import React from "react";
 import { translateAccountType, translateCurrency, formatBalances } from "../services/api";
 import { getAccountFromStorage } from "../storage/storage";
 import AccountStorage from "../constants/Storage";
