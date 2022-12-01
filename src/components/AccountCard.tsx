@@ -1,4 +1,3 @@
-import React from "react";
 import AccountCardProps from "../types/components/AccountCardProps";
 import { translateAccountType } from "../services/api";
 import { saveAccountOnStorage } from "../storage/storage";

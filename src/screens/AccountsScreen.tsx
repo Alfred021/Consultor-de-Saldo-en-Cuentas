@@ -56,9 +56,9 @@ const AccountsScreen = ():JSX.Element => {
                   <h2>{"<< Anteriores"}</h2>
                 </span>
               )}
-              {paginationAccounts?.map((account) =>(
+              {paginationAccounts?.map((account, index) =>(
                   <>
-                    <AccountCard account={account}/>
+                    <AccountCard key={index} account={account}/>
                   </>   
               ))}
               {accounts && pageSize * page < accounts?.length -1  && (
