@@ -6,7 +6,7 @@ import "../styles/screens/AccountDetailScreen.css";
 
 const AccountDetailScreen = ():JSX.Element => {
     const currentAccount = getAccountFromStorage(AccountStorage.currentAccount);
-
+    
     return (
         <div>
             <div className="titles-container">
