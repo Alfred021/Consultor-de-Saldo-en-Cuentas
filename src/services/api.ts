@@ -3,9 +3,6 @@ import Account from "../types/models/Account";
 export const getAccounts = async ():Promise<Account[] |null> => {
     try {
         const accountsResponse = await fetch(process.env.REACT_APP_API_URL ?? '').then(response => {
-            if (!response) {
-                throw new Error(response)
-            }
             return response.json();
         });
         return parseAccounts(accountsResponse.cuentas);
@@ -61,7 +58,6 @@ export const translateCurrency = (type: string): string => {
 export const formatBalances = (balance: string): string => {
     if (balance.includes('-')) {
         return balance.replaceAll('-', '');
-    } else {
-        return balance;
-    }
+    } 
+    return balance;
 }

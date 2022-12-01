@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import AccountsScreen from './screens/AccountsScreen';
 import AccountDetailScreen from './screens/AccountDetailScreen';
