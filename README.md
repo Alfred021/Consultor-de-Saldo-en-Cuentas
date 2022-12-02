@@ -1,3 +1,30 @@
+# Consultor de Saldo en Cuentas: 
+
+Este proyecto fue creado utilizando create-react-app.
+
+## Empezar el Proyecto
+
+Usar `npm install` para instalar todas las dependencias.
+Despues para levantar el proyecto simplemente: 
+
+### `npm run start`
+
+Para correr los tests unitarios: 
+
+### `npm run test`
+
+Para ver code coverage de los tests: 
+
+### `npm run test -- --coverage`
+
+Para configurar husky junto con prettier y eslint para formatear y reforzar estilo en el pre-commit:
+
+### `npm run configure-husky`
+
+Despues de toda la instalación crear un archivo `.env` (el nombre así tal cual esta escrito) en raiz del proyecto, colocarle esta variable: REACT_APP_API_URL = y el valor para la api de prueba que aparece en el documento: 
+Challenge Desarrollador NCR - SSFW, de Octubre 2022 el cual es la inspiración para este proyecto.
+Luego despues de haber creado el env y añadida la variable, cerrar y volver a abrir el proyecto, esperar a que corran los tests y levantarla con los comandos mencionados anteriormente. Todo esto tomando en cuenta que el archivo .env no se commitea nunca.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

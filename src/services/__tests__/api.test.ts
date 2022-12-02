@@ -15,7 +15,7 @@ describe("Testeando una correcta respuesta del servicio de cuentas", () => {
     jest.restoreAllMocks();
   });
 
-  test('fetcheando el listado de cuentas', async () => {
+  test('Haciendo fetch al listado de cuentas', async () => {
     getAccounts();
     expect.assertions(2);
     expect(fetchMock).toBeCalledTimes(1);
@@ -24,7 +24,7 @@ describe("Testeando una correcta respuesta del servicio de cuentas", () => {
 })
 
 
-test('comprobando que la respuesta de la promesa se igual al modelo Account', async () => {
+test('Comprobando que la respuesta de la promesa sea igual al modelo Account', async () => {
   const results = await getAccounts();
   expect(results).toBeTruthy();
   results?.forEach((result: Account) => {
@@ -35,7 +35,7 @@ test('comprobando que la respuesta de la promesa se igual al modelo Account', as
   }); 
 });
 
-test('formateando correctamente balances con posible guion entre cifras', () => {
+test('Formateando correctamente balances con posible guion entre caracteres númericos', () => {
   const incorrectBalance = '2-2-0';
   const correctBalance = "220";
   const formattedBalance = formatBalances(incorrectBalance);
