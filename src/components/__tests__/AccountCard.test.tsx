@@ -3,7 +3,7 @@ import Account from '../../types/models/Account';
 import AccountCard from "../AccountCard";
 import { saveAccountOnStorage }from "../../storage/storage";
 
-describe('render tarjeta para cuenta', () => {
+describe('Renderizar Tarjeta para mostrar Cuentas', () => {
     const { location } = window;
 
     beforeEach(() => {
@@ -33,7 +33,7 @@ describe('render tarjeta para cuenta', () => {
     const divElement = screen.getByText("Nro: test"); 
     fireEvent.click(divElement);
 
-    test('probando functiones en evento onclick card', () => {
+    test('Probando function en el momento de hacer click en la tarjeta', () => {
         expect(jest.isMockFunction(window.location.assign)).toBe(true);
         saveAccountOnStorage(mockAccount);
         expect(global.localStorage.setItem).toHaveBeenCalled()

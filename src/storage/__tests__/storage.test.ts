@@ -12,7 +12,7 @@ describe('Guardando local Storage', () => {
         jest.restoreAllMocks();
     })
 
-    test('Llamando a guardar localStorage', () => {
+    test('Llamando a localStorage para guardar Account', () => {
         const mockAccount:Account = {
             e: "test",
             n: "test",
@@ -37,7 +37,7 @@ describe('Obteniendo la cuenta actual', () => {
         jest.restoreAllMocks();
     })
 
-    test('Llamando a traer cuenta de LocalStorage', () => {
+    test('Llamando a LocalStorage para traer la cuenta actual', () => {
         getAccountFromStorage(AccountStorage.currentAccount);
         expect(global.localStorage.getItem).toHaveBeenCalled();
         expect(global.localStorage.getItem).toHaveBeenCalledTimes(1);

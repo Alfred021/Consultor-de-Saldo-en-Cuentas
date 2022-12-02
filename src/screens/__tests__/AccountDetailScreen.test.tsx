@@ -5,7 +5,7 @@ import AccountStorage from "../../constants/Storage";
 import { saveAccountOnStorage, getAccountFromStorage }from "../../storage/storage";
 
 
-describe('render Screen para detalle de Cuentas', () => {
+describe('Renderizar Pantalla para detalle de Cuenta', () => {
     beforeEach(() => {
         jest.spyOn(Object.getPrototypeOf(global.localStorage), 'setItem')
         Object.setPrototypeOf(global.localStorage.setItem, jest.fn());
@@ -26,7 +26,7 @@ describe('render Screen para detalle de Cuentas', () => {
         tipoLetras: "test",
     };
 
-    test('recuperando una cuenta del storage', () => {
+    test('Recuperando una cuenta de localStorage y asegurando correcto formato de la pantalla', () => {
         saveAccountOnStorage(mockAccount);
         expect(global.localStorage.setItem).toHaveBeenCalled()
         expect(global.localStorage.setItem).toHaveBeenCalledTimes(1);
